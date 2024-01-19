@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Selector Types Example</title>
+</head>
+<body>
+  <h1 id="pageTitle">Selector Types</h1>
+
+  <h5>getElementById</h5>
+  <input type="button" onclick="changeColorById()" value="Click here to change color" />
+  <script>
+    function changeColorById() {
+      var demo = document.getElementById('pageTitle');
+      demo.style.color = "blue";
+    }
+  </script>
+
+  <p>getElementsByTagName</p>
+  <input type="button" onclick="changeColorByTag()" value="Click here to change color" />
+  <script>
+    function changeColorByTag() {
+      var demo1 = document.getElementsByTagName('p')[0]; // assuming you want to change the color of the first <p> element
+      demo1.style.color = "blue";
+    }
+  </script>
+
+  <p class="changeClass">getElementsByClassName</p>
+  <input type="button" onclick="changeColorByClass()" value="Click here to change color" />
+  <script>
+    function changeColorByClass() {
+      var demo2 = document.getElementsByClassName('changeClass')[0]; // assuming you want to change the color of the first element with class 'changeClass'
+      demo2.style.color = "blue";
+    }
+  </script>
+
+  <p class="high">querySelector</p>
+  <input type="button" onclick="changeColorByQuery()" value="Click here to change color" />
+  <script>
+    function changeColorByQuery() {
+      var demo3 = document.querySelector('.high');
+      demo3.style.color = "blue";
+    }
+  </script>
+
+</body>
+</html>
